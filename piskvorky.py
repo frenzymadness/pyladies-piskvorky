@@ -35,3 +35,7 @@ def piskvorky1d():
     Hraje 1D piškvorky.
     """
     pass
+
+
+if __name__ == "__main__":
+    piskvorky1d()
