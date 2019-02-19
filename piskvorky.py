@@ -11,14 +11,14 @@ def vyhodnot(pole):
 
 def tah(pole, cislo_policka, symbol):
     """
-    Vrátí herní pole s daným symbolem umístěným na danou pozici.
+    Vrátí herní pole s daným symbolem umístěným na danou pozici.
     """
     pass
 
 
 def tah_hrace(pole):
     """
-    Zeptá se hráče, kam chce hrát, a vrátí herní pole s jeho zaznamenaným tahem.
+    Zeptá se hráče, kam chce hrát, a vrátí herní pole s jeho zaznamenaným tahem.
     """
     pass
 

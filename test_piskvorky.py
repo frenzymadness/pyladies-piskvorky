@@ -83,7 +83,7 @@ def test_tah_minus1():
 
 def test_tah_spatny_symbol():
     """
-    Hra s jiným symbolem než \"o\" a \"x\" by měla skončit chybou ValueError.
+    Hra jiným symbolem než \"o\" a \"x\" by měla skončit chybou ValueError.
     """
     with pytest.raises(ValueError):
         tah("--------------------", 2, "m")
@@ -91,7 +91,7 @@ def test_tah_spatny_symbol():
 
 def test_tah_spatny_symbol_ox():
     """
-    Hra s více symboly by měla skončit chybou ValueError.
+    Hra více symboly by měla skončit chybou ValueError.
     """
     with pytest.raises(ValueError):
         tah("--------------------", 2, "xo")
@@ -101,7 +101,7 @@ def test_tah_spatny_symbol_ox():
 
 def test_tah_10():
     """
-    Pozitivní testy s délkou pole 10.
+    Pozitivní testy s délkou pole 10.
     """
     assert tah("----------", 0, 'x') == "x---------"
     assert tah("----------", 9, 'x') == "---------x"
@@ -111,7 +111,7 @@ def test_tah_10():
 
 def test_tah_30():
     """
-    Pozitivní testy s délkou pole 30.
+    Pozitivní testy s délkou pole 30.
     """
     assert tah("-" * 30, 0, 'x') == "x" + "-" * 29
     assert tah("-" * 30, 29, 'x') == "-" * 29 + "x"
@@ -121,7 +121,7 @@ def test_tah_30():
 
 def test_indexmax_10():
     """
-    Hra na pozici, co není v poli, by měla skončit chybou IndexError.
+    Hra na pozici, co není v poli, by měla skončit chybou IndexError.
     """
     with pytest.raises(IndexError):
         tah("-" * 10, 10, "x")
