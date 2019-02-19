@@ -5,13 +5,22 @@ DELKA_POLE = 20
 SYMBOL_HRACE = "x"
 SYMBOL_POCITACE = "o"
 
+POTREBA_K_VYHRE = 3
+
 
 def vyhodnot(pole):
     """
     Vrátí x (výhra x), o (výhra o), ! (remíza), - (hra neskončila) podle stavu
     hry.
     """
-    pass
+    if SYMBOL_HRACE * POTREBA_K_VYHRE in pole:
+        return "x"
+    elif SYMBOL_POCITACE * POTREBA_K_VYHRE in pole:
+        return "o"
+    elif "-" in pole:
+        return "-"
+    else:
+        return "!"
 
 
 def tah(pole: object, cislo_policka: object, symbol: object) -> object:
