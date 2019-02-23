@@ -37,7 +37,28 @@ def tah_hrace(pole):
     Zeptá se hráče, kam chce hrát, a vrátí herní pole s jeho zaznamenaným
     tahem.
     """
-    pass
+    while True:
+        vstup_uzivatele = input("Na jaké políčko chceš hrát? ")
+
+        if not vstup_uzivatele.isdigit():
+            print("Neplatné číslo políčka")
+            continue
+
+        cislo_policka = int(vstup_uzivatele)
+
+        if cislo_policka < 0 or cislo_policka > len(pole) - 1:
+            print("Tah mimo herní pole")
+            continue
+
+        if pole[cislo_policka] != "-":
+            print("Tah na obsazené pole")
+            continue
+
+        try:
+            return tah(pole, cislo_policka, SYMBOL_HRACE)
+        except (IndexError, ValueError) as exception:  # Chybné zadání
+            print(exception)
+            continue
 
 
 def tah_pocitace(pole):
