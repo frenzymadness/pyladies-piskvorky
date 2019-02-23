@@ -79,7 +79,27 @@ def piskvorky1d():
     """
     Hraje 1D piškvorky.
     """
-    pass
+    pole = "-" * DELKA_POLE
+    while True:
+        print(pole)
+        stav = vyhodnot(pole)
+        if stav == "-":
+            pole = tah_hrace(pole)
+            pole = tah_pocitace(pole)
+            continue
+        elif stav == "!":
+            print("Remíza")
+            break
+        elif stav == "x":
+            print("Vyhrála jsi")
+            break
+        elif stav == "o":
+            print("Vyhrál počítač")
+            break
+        else:
+            print("Jsem v koncích")  # Neznámý stav hry
+            break
+
 
 if __name__ == "__main__":
     piskvorky1d()
