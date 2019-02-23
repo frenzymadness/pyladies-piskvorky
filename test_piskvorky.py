@@ -99,38 +99,6 @@ def test_tah_spatny_symbol_ox():
         tah("--------------------", 2, "ox")
 
 
-def test_tah_10():
-    """
-    Pozitivní testy s délkou pole 10.
-    """
-    assert tah("----------", 0, 'x') == "x---------"
-    assert tah("----------", 9, 'x') == "---------x"
-    assert tah("----------", 0, 'o') == "o---------"
-    assert tah("----------", 9, 'o') == "---------o"
-
-
-def test_tah_30():
-    """
-    Pozitivní testy s délkou pole 30.
-    """
-    assert tah("-" * 30, 0, 'x') == "x" + "-" * 29
-    assert tah("-" * 30, 29, 'x') == "-" * 29 + "x"
-    assert tah("-" * 30, 0, 'o') == "o" + "-" * 29
-    assert tah("-" * 30, 29, 'o') == "-" * 29 + "o"
-
-
-def test_indexmax_10():
-    """
-    Hra na pozici, co není v poli, by měla skončit chybou IndexError.
-    """
-    with pytest.raises(IndexError):
-        tah("-" * 10, 10, "x")
-    with pytest.raises(IndexError):
-        tah("-" * 30, 30, "o")
-    with pytest.raises(IndexError):
-        tah("", 0, "x")
-
-
 def test_tah_pocitace_prazdne():
     """
     Hra na prázdné pole.
@@ -183,34 +151,6 @@ def test_tah_pocitace_skoro_plne_konec_2():
     assert len(result) == 20
     assert result.count("x") == 9
     assert result.count("o") == 10
-
-
-def test_tah_pocitace_kratke():
-    """
-    Hra počítače na krátké pole.
-    """
-    result = tah_pocitace("-" * 5)
-    assert len(result) == 5
-    assert result.count("-") == 4
-    assert result.count("o") == 1
-
-
-def test_tah_pocitace_dlouhe():
-    """
-    Hra počítače na dlouhé pole.
-    """
-    result = tah_pocitace("-" * 100)
-    assert len(result) == 100
-    assert result.count("-") == 99
-    assert result.count("o") == 1
-
-
-def test_tah_pocitace_nulove():
-    """
-    Hra počítače na pole nulové délky.
-    """
-    with pytest.raises(ValueError):
-        tah_pocitace("")
 
 
 def test_tah_pocitace_plne():

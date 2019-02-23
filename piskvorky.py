@@ -1,3 +1,5 @@
+DELKA_POLE = 20
+
 SYMBOL_HRACE = 'x'
 SYMBOL_POCITACE = 'o'
 
