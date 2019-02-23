@@ -157,5 +157,11 @@ def test_tah_pocitace_plne():
     """
     Hra počítače na plné pole.
     """
-    with pytest.raises(ValueError):
-        tah_pocitace("xo" * 10)
+
+    def test_tah_pocitace_plne():
+        """
+        Hra počítače na plné pole.
+        """
+        with pytest.raises(ValueError):
+            pole = "xoxoxoxoxoxoxoxoxoxo"
+            tah_pocitace(pole)
