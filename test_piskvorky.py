@@ -7,6 +7,8 @@ def test_vyhodnot_vyhra_x():
     Křížky vyhrály.
     """
     assert vyhodnot("xxx-----------------") == 'x'
+    assert vyhodnot("--------xxx---------") == 'x'
+    assert vyhodnot("-----------------xxx") == 'x'
 
 
 def test_vyhodnot_vyhra_o():
@@ -14,6 +16,8 @@ def test_vyhodnot_vyhra_o():
     Kolečka vyhrála.
     """
     assert vyhodnot("ooo-----------------") == 'o'
+    assert vyhodnot("--------ooo---------") == 'o'
+    assert vyhodnot("-----------------ooo") == 'o'
 
 
 def test_vyhodnot_remiza():
@@ -28,6 +32,7 @@ def test_vyhodnot_hra():
     """
     Hra neskončila.
     """
+    assert vyhodnot("--------------------") == '-'
     assert vyhodnot("xx----------------oo") == '-'
     assert vyhodnot("-xoxoxoxoxoxoxoxoxox") == '-'
     assert vyhodnot("-xooxxooxxooxxooxxoo") == '-'
@@ -55,55 +60,12 @@ def test_tah_o():
     assert tah("--------------------", 19, 'o') == '-------------------o'
 
 
-def test_tah_obsazeno():
-    """
-    Hra na obsazené políčko by měla skončit chybou IndexError.
-    """
-    with pytest.raises(IndexError):
-        tah("o-------------------", 0, "o")
-    with pytest.raises(IndexError):
-        tah("----------x---------", 10, "o")
-
-
-def test_tah_index404():
-    """
-    Hra na pozici, co není v poli, by měla skončit chybou IndexError.
-    """
-    with pytest.raises(IndexError):
-        tah("--------------------", 20, "x")
-
-
-def test_tah_minus1():
-    """
-    Hra na zápornou pozici by měla skončit chybou IndexError.
-    """
-    with pytest.raises(IndexError):
-        tah("--------------------", -1, "x")
-
-
-def test_tah_spatny_symbol():
-    """
-    Hra jiným symbolem než \"o\" a \"x\" by měla skončit chybou ValueError.
-    """
-    with pytest.raises(ValueError):
-        tah("--------------------", 2, "m")
-
-
-def test_tah_spatny_symbol_ox():
-    """
-    Hra více symboly by měla skončit chybou ValueError.
-    """
-    with pytest.raises(ValueError):
-        tah("--------------------", 2, "xo")
-    with pytest.raises(ValueError):
-        tah("--------------------", 2, "ox")
-
-
 def test_tah_pocitace_prazdne():
     """
     Hra na prázdné pole.
     """
-    result = tah_pocitace("-" * 20)
+    pole = "--------------------"
+    result = tah_pocitace(pole)
     assert len(result) == 20
     assert result.count("-") == 19
     assert result.count("o") == 1
@@ -151,17 +113,3 @@ def test_tah_pocitace_skoro_plne_konec_2():
     assert len(result) == 20
     assert result.count("x") == 9
     assert result.count("o") == 10
-
-
-def test_tah_pocitace_plne():
-    """
-    Hra počítače na plné pole.
-    """
-
-    def test_tah_pocitace_plne():
-        """
-        Hra počítače na plné pole.
-        """
-        with pytest.raises(ValueError):
-            pole = "xoxoxoxoxoxoxoxoxoxo"
-            tah_pocitace(pole)
