@@ -82,7 +82,7 @@ Snad ti tato zkušenost ukázala, že automatické testování ti může ušetř
 Nahlédni do souboru [_test_piskvorky.py_][testpiskvorky]. Možná teď ještě nebudeš rozumět do detailu, jak to všechno vlastně funguje, ale i tak uvidíš, že to není raketová věda. Máš herní pole v nějakém stavu, zavoláš svou funkci, a ověříš, že vrátila to, co by měla.
 
 ```python
-assert tah("--------------------", 10, 'x') == '----------x---------'
+assert tah("--------------------", 10, "x") == "----------x---------"
 ```
 
 [Později][testing] se naučíš psát si testy sama. Snad ti tenhle malý exkurs ukázal, proč to není zbytečnost a že se ta trocha přidané námahy na začátku skutečně vyplatí.
