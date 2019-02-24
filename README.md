@@ -38,29 +38,35 @@ V souboru [_test_piskvorky.py_][testpiskvorky] máš připravené testy. Nic v�
 
 [Pytest] ti vypíše, kde všude v tvém programu narazil na problém. Tyto jsou podrobně rozepsané a výstup je tak trochu dlouhý. Na jeho začátku však budeš mít takovéto řádky:
 
-> test_piskvorky.py::test_vyhodnot_vyhra_x FAILED
-> test_piskvorky.py::test_vyhodnot_vyhra_o FAILED
-> test_piskvorky.py::test_vyhodnot_remiza FAILED
-> …
-> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 FAILED
+```
+test_piskvorky.py::test_vyhodnot_vyhra_x FAILED
+test_piskvorky.py::test_vyhodnot_vyhra_o FAILED
+test_piskvorky.py::test_vyhodnot_remiza FAILED
+…
+test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 FAILED
+```
 
 Každé _FAILED_ znamená jednu chybu: jeden test, který neprošel. Protože jsi zatím nic nenapsala, je problém úplně ve všem. To se ale změní, jakmile splníš první úkol: zařídíš, aby funkce _vyhodnot_ rozpoznala, že vyhrál hráč s křížky.
 
-> test_piskvorky.py::test_vyhodnot_vyhra_x PASSED
-> test_piskvorky.py::test_vyhodnot_vyhra_o FAILED
-> test_piskvorky.py::test_vyhodnot_remiza FAILED
-> …
-> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 FAILED
+```
+test_piskvorky.py::test_vyhodnot_vyhra_o FAILED
+test_piskvorky.py::test_vyhodnot_vyhra_x PASSED
+test_piskvorky.py::test_vyhodnot_remiza FAILED
+…
+test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 FAILED
+```
 
 Vidíš? Výsledek prvního testu se změnil na _PASSED_. To znamená, že v tomto případě program funguje, jak má.
 
 Až budeš mít program hotový, místo všech červených _FAILED_ bude u všech testů zelené _PASSED_. Pak víš, že máš hotovo. Teda, skoro.
 
-> test_piskvorky.py::test_vyhodnot_vyhra_x PASSED
-> test_piskvorky.py::test_vyhodnot_vyhra_o PASSED
-> …
-> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec PASSED
-> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 PASSED
+```
+test_piskvorky.py::test_vyhodnot_vyhra_x PASSED
+test_piskvorky.py::test_vyhodnot_vyhra_o PASSED
+…
+test_piskvorky.py::test_tah_pocitace_skoro_plne_konec PASSED
+test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 PASSED
+```
 
 Proč jen skoro? Některé věci testovat moc dobře nejdou, nebo by to bylo pro tebe v tuto chvíli moc složité.
 
