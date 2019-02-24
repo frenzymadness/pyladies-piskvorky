@@ -1,5 +1,8 @@
-from piskvorky import tah, tah_pocitace, vyhodnot
+#!/usr/bin/env python
+
 import pytest
+
+from piskvorky import tah, tah_pocitace, vyhodnot
 
 
 def test_vyhodnot_vyhra_x():
@@ -113,3 +116,7 @@ def test_tah_pocitace_skoro_plne_konec_2():
     assert len(result) == 20
     assert result.count("x") == 9
     assert result.count("o") == 10
+
+
+if __name__ == "__main__":
+    pytest.main()

@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 DELKA_POLE = 20
 
 SYMBOL_HRACE = "x"
@@ -6,7 +8,8 @@ SYMBOL_POCITACE = "o"
 
 def vyhodnot(pole):
     """
-    Vrátí x (výhra x), o (výhra o), ! (remíza), - (hra neskončila) podle stavu hry.
+    Vrátí x (výhra x), o (výhra o), ! (remíza), - (hra neskončila) podle stavu
+    hry.
     """
     pass
 
@@ -20,7 +23,8 @@ def tah(pole: object, cislo_policka: object, symbol: object) -> object:
 
 def tah_hrace(pole):
     """
-    Zeptá se hráče, kam chce hrát, a vrátí herní pole s jeho zaznamenaným tahem.
+    Zeptá se hráče, kam chce hrát, a vrátí herní pole s jeho zaznamenaným
+    tahem.
     """
     pass
 
