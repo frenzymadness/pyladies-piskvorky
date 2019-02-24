@@ -2,9 +2,11 @@
 
 ## Co to je? ##
 
-Poté, co ses [naučila][defstr] pracovat s řetězci a psát vlastní funkce, dostala jsi za [úkol][handout4] naprogramovat si svou první jednoduchou hru: jednorozměrné piškvorky. Zatím máš předepsané, z jakých dílčích funkcí se bude hra skládat. Toho využijeme a nahlédneme do pokročilejší lekce – té o [testování][testing].
+Poté, co ses [naučila][defstr] pracovat s řetězci a psát vlastní funkce, dostala jsi za [úkol][handout4] naprogramovat si jednoduchou hru: jednorozměrné piškvorky. Zatím máš předepsané, z jakých dílčích funkcí se bude hra skládat. Toho využijeme a nahlédneme do pokročilejší lekce – té o [testování][testing].
 
 [Testování][testing] ti pomůže ověřit, že tvůj program funguje, jak má. Neboj se však nic, všechno to složitější jsme zatím napsali za tebe. Ty tak můžeš postupovat podle [zadání][handout4] domácích projektů a testy ti spuštěním jednoho jednoduchého příkazu ukážou, jak moc blízko jsi dokončení programu.
+
+**Pozor,** příkazy na této stránce jsou jen pro rychlou referenci a na svém počítači (zvláště máš-li Windows) možná budeš potřebovat trochu jiné. Podrobně je vše v [materiálech][course] ke kurzu, řiď se hlavně jimi. Odkaz na podřebnou stránku máš vždy u daného kroku.
 
 ## Jak na to? ##
 
@@ -18,13 +20,13 @@ $ . venv/bin/activate
 (venv) $
 ```
 
-4. Nainstaluj si knihovnu [pytest] podle [návodu](https://naucse.python.cz/2019/pyladies-ostrava-jaro/beginners/testing/) v materiálech. Právě ta ti umožní ověřit správnou funkčnost programu.
+4. Nainstaluj si knihovnu [pytest] podle [návodu][testing] v materiálech. Právě ta ti umožní ověřit správnou funkčnost programu.
 
 ```shell
 (venv) $ pip install pytest
 ```
 
-5. Opět podle [návodu](https://naucse.python.cz/2019/pyladies-ostrava-jaro/beginners/testing/) [pytest] spusť.
+5. Opět podle [návodu][testing] [pytest] spusť.
 
 ```shell
 (venv) $ pytest test_piskvorky.py
@@ -69,14 +71,18 @@ assert tah("--------------------", 10, 'x') == '----------x---------'
 
 ## Kdo za to může? ##
 
-* S nápadem přišel @frenzymadness.
-* Testy napsal @encukou.
-* Do kupy to dal, mustr a povídání napsal @glutexo.
+* S nápadem přišel [@frenzymadness].
+* Testy napsal [@encukou].
+* Do kupy to dal, mustr a povídání napsal [@glutexo].
 
 [defstr]: https://naucse.python.cz/2019/pyladies-ostrava-jaro/sessions/def-str/
 [handout4]: http://pyladies.cz/v1/s004-strings/handout/handout4-ostrava.pdf
+[course]: https://naucse.python.cz/2019/pyladies-ostrava-jaro/
 [testing]: https://naucse.python.cz/2019/pyladies-ostrava-jaro/beginners/testing/
-[venvsetup]: (https://naucse.python.cz/2019/pyladies-ostrava-jaro/beginners/venv-setup/)
+[venvsetup]: https://naucse.python.cz/2019/pyladies-ostrava-jaro/beginners/venv-setup/
 [pytest]: https://pytest.readthedocs.io/
 [testpiskvorky]: https://github.com/Glutexo/pyladies-piskvorky/blob/master/test_piskvorky.py
 [piskvorky]: https://github.com/Glutexo/pyladies-piskvorky/blob/master/piskvorky.py
+[@frenzymadness]: https://github.com/frenzymadness/
+[@encukou]: https://github.com/encukou/
+[@glutexo]: https://github.com/Glutexo/
