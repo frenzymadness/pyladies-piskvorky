@@ -1,7 +1,7 @@
 DELKA_POLE = 20
 
-SYMBOL_HRACE = 'x'
-SYMBOL_POCITACE = 'o'
+SYMBOL_HRACE = "x"
+SYMBOL_POCITACE = "o"
 
 
 def vyhodnot(pole):
@@ -11,7 +11,7 @@ def vyhodnot(pole):
     pass
 
 
-def tah(pole, cislo_policka, symbol):
+def tah(pole: object, cislo_policka: object, symbol: object) -> object:
     """
     Vrátí herní pole s daným symbolem umístěným na danou pozici.
     """

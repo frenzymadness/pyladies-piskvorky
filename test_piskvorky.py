@@ -6,58 +6,58 @@ def test_vyhodnot_vyhra_x():
     """
     Křížky vyhrály.
     """
-    assert vyhodnot("xxx-----------------") == 'x'
-    assert vyhodnot("--------xxx---------") == 'x'
-    assert vyhodnot("-----------------xxx") == 'x'
+    assert vyhodnot("xxx-----------------") == "x"
+    assert vyhodnot("--------xxx---------") == "x"
+    assert vyhodnot("-----------------xxx") == "x"
 
 
 def test_vyhodnot_vyhra_o():
     """
     Kolečka vyhrála.
     """
-    assert vyhodnot("ooo-----------------") == 'o'
-    assert vyhodnot("--------ooo---------") == 'o'
-    assert vyhodnot("-----------------ooo") == 'o'
+    assert vyhodnot("ooo-----------------") == "o"
+    assert vyhodnot("--------ooo---------") == "o"
+    assert vyhodnot("-----------------ooo") == "o"
 
 
 def test_vyhodnot_remiza():
     """
     Nastala remíza.
     """
-    assert vyhodnot("oxoxoxoxoxoxoxoxoxox") == '!'
-    assert vyhodnot("xxooxxooxxooxxooxxoo") == '!'
+    assert vyhodnot("oxoxoxoxoxoxoxoxoxox") == "!"
+    assert vyhodnot("xxooxxooxxooxxooxxoo") == "!"
 
 
 def test_vyhodnot_hra():
     """
     Hra neskončila.
     """
-    assert vyhodnot("--------------------") == '-'
-    assert vyhodnot("xx----------------oo") == '-'
-    assert vyhodnot("-xoxoxoxoxoxoxoxoxox") == '-'
-    assert vyhodnot("-xooxxooxxooxxooxxoo") == '-'
-    assert vyhodnot("xoxoxoxoxoxoxoxoxox-") == '-'
-    assert vyhodnot("xooxxooxxooxxooxxoo-") == '-'
-    assert vyhodnot("oxoxoxoxo-oxoxoxoxox") == '-'
-    assert vyhodnot("xxooxxoox-ooxxooxxoo") == '-'
+    assert vyhodnot("--------------------") == "-"
+    assert vyhodnot("xx----------------oo") == "-"
+    assert vyhodnot("-xoxoxoxoxoxoxoxoxox") == "-"
+    assert vyhodnot("-xooxxooxxooxxooxxoo") == "-"
+    assert vyhodnot("xoxoxoxoxoxoxoxoxox-") == "-"
+    assert vyhodnot("xooxxooxxooxxooxxoo-") == "-"
+    assert vyhodnot("oxoxoxoxo-oxoxoxoxox") == "-"
+    assert vyhodnot("xxooxxoox-ooxxooxxoo") == "-"
 
 
 def test_tah_x():
     """
     Pozitivní testy se symbolem "x".
     """
-    assert tah("--------------------", 0, 'x') == 'x-------------------'
-    assert tah("--------------------", 10, 'x') == '----------x---------'
-    assert tah("--------------------", 19, 'x') == '-------------------x'
+    assert tah("--------------------", 0, "x") == "x-------------------"
+    assert tah("--------------------", 10, "x") == "----------x---------"
+    assert tah("--------------------", 19, "x") == "-------------------x"
 
 
 def test_tah_o():
     """
     Pozitivní testy se symbolem "o".
     """
-    assert tah("--------------------", 0, 'o') == 'o-------------------'
-    assert tah("--------------------", 10, 'o') == '----------o---------'
-    assert tah("--------------------", 19, 'o') == '-------------------o'
+    assert tah("--------------------", 0, "o") == "o-------------------"
+    assert tah("--------------------", 10, "o") == "----------o---------"
+    assert tah("--------------------", 19, "o") == "-------------------o"
 
 
 def test_tah_pocitace_prazdne():
