@@ -29,26 +29,38 @@ $ . venv/bin/activate
 5. Opět podle [návodu][testing] [pytest] spusť.
 
 ```shell
-(venv) $ pytest test_piskvorky.py
+(venv) $ pytest -v test_piskvorky.py
 ```
 
 V souboru [_test_piskvorky.py_][testpiskvorky] máš připravené testy. Nic v něm neměň, ale můžeš se do něj podívat. Samotnou hru pak piš do připraveného souboru [_piskvorky.py_][piskvorky]. Máš tam nachystané všechny potřebné funkce, jen zatím nic nedělají. Až je všechny doplníš, budeš mít funkční hru.
 
 ## Co s tím? ##
 
-[Pytest] ti vypíše, kde všude v tvém programu narazil na problém. Tyto jsou podrobně rozepsané a výstup je tak trochu dlouhý. Na jeho začátku však budeš mít takovýto řádek:
+[Pytest] ti vypíše, kde všude v tvém programu narazil na problém. Tyto jsou podrobně rozepsané a výstup je tak trochu dlouhý. Na jeho začátku však budeš mít takovéto řádky:
 
-> test_piskvorky.py FFFFFFFFFFF
+> test_piskvorky.py::test_vyhodnot_vyhra_x FAILED
+> test_piskvorky.py::test_vyhodnot_vyhra_o FAILED
+> test_piskvorky.py::test_vyhodnot_remiza FAILED
+> …
+> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 FAILED
 
-Každé _F_ znamená jednu chybu: jeden test, který neprošel. Protože jsi zatím nic nenapsala, je problém úplně ve všem. To se ale změní, jakmile splníš první úkol: zařídíš, aby funkce _vyhodnot_ rozpoznala, že vyhrál hráč s křížky.
+Každé _FAILED_ znamená jednu chybu: jeden test, který neprošel. Protože jsi zatím nic nenapsala, je problém úplně ve všem. To se ale změní, jakmile splníš první úkol: zařídíš, aby funkce _vyhodnot_ rozpoznala, že vyhrál hráč s křížky.
 
-> test_piskvorky.py .FFFFFFFFFF
+> test_piskvorky.py::test_vyhodnot_vyhra_x PASSED
+> test_piskvorky.py::test_vyhodnot_vyhra_o FAILED
+> test_piskvorky.py::test_vyhodnot_remiza FAILED
+> …
+> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 FAILED
 
-Vidíš? Jedno F se změnilo v tečku! Tečky jsou dobré, znamenají, že vše funguje, jak má.
+Vidíš? Výsledek prvního testu se změnil na _PASSED_. To znamená, že v tomto případě program funguje, jak má.
 
-Až budeš mít program hotový, žádné _F_ nezbyde; zůstanou po nich jen tečky. Pak víš, že máš hotovo. Teda, skoro.
+Až budeš mít program hotový, místo všech červených _FAILED_ bude u všech testů zelené _PASSED_. Pak víš, že máš hotovo. Teda, skoro.
 
-> test_piskvorky.py ...........
+> test_piskvorky.py::test_vyhodnot_vyhra_x PASSED
+> test_piskvorky.py::test_vyhodnot_vyhra_o PASSED
+> …
+> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec PASSED
+> test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 PASSED
 
 Proč jen skoro? Některé věci testovat moc dobře nejdou, nebo by to bylo pro tebe v tuto chvíli moc složité.
 
