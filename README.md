@@ -10,7 +10,7 @@ Poté, co ses [naučila][defstr] pracovat s řetězci a psát vlastní funkce, 
 
 ## Jak na to? ##
 
-1. Stáhni si tyto připravené soubory. Vpravo pod zeleným tlačítkem _Clone or download_ najdeš volbu _Download ZIP_.
+1. Stáhni si tyto připravené soubory. Vpravo nad seznamem souborů po stisknutí zeleného tlačítka _Clone or download_ najdeš volbu _Download ZIP_.
 2. Stažený archiv rozbal někam poblíž tvých stávajících projektů z PyLadies. Složku nech, tak jak je, jako celek, nepřesouvej z ní soubory pryč.
 3. V příkazové řádce si složku otevři a vytvoř si v ní nové [virtuální prostředí][venvsetup]. To následně aktivuj.
 
