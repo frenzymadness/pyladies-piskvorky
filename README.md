@@ -6,37 +6,30 @@ Poté, co ses [naučila][defstr] pracovat s řetězci a psát vlastní funkce, 
 
 [Testování][testing] ti pomůže ověřit, že tvůj program funguje, jak má. Neboj se však nic, všechno to složitější jsme zatím napsali za tebe. Ty tak můžeš postupovat podle [zadání][handout4] domácích projektů a testy ti spuštěním jednoho jednoduchého příkazu ukážou, jak moc blízko jsi dokončení programu.
 
-**Pozor,** příkazy na této stránce jsou jen pro rychlou referenci a na svém počítači (zvláště máš-li Windows) možná budeš potřebovat trochu jiné. Podrobně je vše v [materiálech][course] ke kurzu, řiď se hlavně jimi. Odkaz na podřebnou stránku máš vždy u daného kroku.
+Toto je bonusový materiál, který může udělat domácí úkol zajímavější a naučit tě při tom opět něco nového. Pokud máš ale plné ruce práce se zvládání aktuální látky. klidně postupuj jen podle zadání domácích projektů a na testování se společně podíváme později.
 
 ## Jak na to? ##
 
-1. Stáhni si tyto připravené soubory. Vpravo nad seznamem souborů po stisknutí zeleného tlačítka _Clone or download_ najdeš volbu _Download ZIP_.
-2. Stažený archiv rozbal někam poblíž tvých stávajících projektů z PyLadies. Složku nech, tak jak je, jako celek, nepřesouvej z ní soubory pryč.
-3. V příkazové řádce si složku otevři a vytvoř si v ní nové [virtuální prostředí][venvsetup]. To následně aktivuj.
+1. Stáhni si připravený soubor pro [piškvorky] a [soubor s testy](testpiskvorky) a ulož je do samostatné složky.
 
-```shell
-$ python3 -m venv venv
-$ . venv/bin/activate
-(venv) $
-```
+    V souboru [_test_piskvorky.py_][testpiskvorky] máš připravené testy. Nic v něm neměň, ale můžeš se do něj podívat. Samotnou hru pak piš do připraveného souboru [_piskvorky.py_][piskvorky]. Máš tam nachystané všechny potřebné funkce, jen zatím nic nedělají. Až je všechny doplníš, budeš mít funkční hru.
 
-4. Nainstaluj si knihovnu [pytest] podle [návodu][testing] v materiálech. Právě ta ti umožní ověřit správnou funkčnost programu.
+1. Aktivuj si své virtuální prostředí.
+1. Nainstaluj si knihovnu [pytest] podle [návodu][testing] v materiálech. Právě ta ti umožní ověřit správnou funkčnost programu.
 
-```shell
-(venv) $ pip install pytest
-```
+    ```shell
+    (venv) $ pip install pytest
+    ```
 
-5. Opět podle [návodu][testing] [pytest] spusť.
+1. Opět podle [návodu][testing] pytest spusť.
 
-```shell
-(venv) $ pytest -v test_piskvorky.py
-```
-
-V souboru [_test_piskvorky.py_][testpiskvorky] máš připravené testy. Nic v něm neměň, ale můžeš se do něj podívat. Samotnou hru pak piš do připraveného souboru [_piskvorky.py_][piskvorky]. Máš tam nachystané všechny potřebné funkce, jen zatím nic nedělají. Až je všechny doplníš, budeš mít funkční hru.
+    ```shell
+    (venv) $ pytest -v test_piskvorky.py
+    ```
 
 ## Co s tím? ##
 
-[Pytest] ti vypíše, kde všude v tvém programu narazil na problém. Tyto jsou podrobně rozepsané a výstup je tak trochu dlouhý. Na jeho začátku však budeš mít takovéto řádky:
+Pytest ti vypíše, kde všude v tvém programu narazil na problém. Tyto jsou podrobně rozepsané a výstup je tak trochu dlouhý. Na jeho začátku však budeš mít takovéto řádky:
 
 ```
 test_piskvorky.py::test_vyhodnot_vyhra_x FAILED
@@ -70,7 +63,7 @@ test_piskvorky.py::test_tah_pocitace_skoro_plne_konec_2 PASSED
 
 Proč jen skoro? Některé věci testovat moc dobře nejdou, nebo by to bylo pro tebe v tuto chvíli moc složité.
 
-* Jednou takovou věcí je zadání od uživatele. Funkci _tah_hrace_ proto [pytest] netestuje. To pak platí i pro celé jádro hry, funkci _piskvorky1d_, která právě funkci _tah_hrace_ používá, když je hráč na tahu.
+* Jednou takovou věcí je zadání od uživatele. Funkci _tah_hrace_ proto pytest netestuje. To pak platí i pro celé jádro hry, funkci _piskvorky1d_, která právě funkci _tah_hrace_ používá, když je hráč na tahu.
 * Druhou věcí, která není testy pokryta, je vypisování na obrazovku. Tedy všechna zvolání o chybách či stavu hry.
 
 Tyto věci musíš ověřit ručně. To by ale nemuselo být tak hrozné: programuješ hru a testováním si rovnou i hraješ.
