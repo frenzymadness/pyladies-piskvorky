@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import pytest
 
 from piskvorky import tah, tah_pocitace, vyhodnot

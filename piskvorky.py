@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 DELKA_POLE = 20
 
 SYMBOL_HRACE = "x"
