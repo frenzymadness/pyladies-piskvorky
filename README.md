@@ -80,12 +80,6 @@ assert tah("--------------------", 10, "x") == "----------x---------"
 
 [Později][testing] se naučíš psát si testy sama. Snad ti tenhle malý exkurs ukázal, proč to není zbytečnost a že se ta trocha přidané námahy na začátku skutečně vyplatí.
 
-## Kdo za to může? ##
-
-* S nápadem přišel [@frenzymadness].
-* Testy napsal [@encukou].
-* Do kupy to dal, mustr a povídání napsal [@glutexo].
-
 [defstr]: https://naucse.python.cz/2019/pyladies-ostrava-jaro/sessions/def-str/
 [handout4]: http://pyladies.cz/v1/s004-strings/handout/handout4-ostrava.pdf
 [course]: https://naucse.python.cz/2019/pyladies-ostrava-jaro/
@@ -94,6 +88,3 @@ assert tah("--------------------", 10, "x") == "----------x---------"
 [pytest]: https://pytest.readthedocs.io/
 [testpiskvorky]: https://github.com/Glutexo/pyladies-piskvorky/blob/master/test_piskvorky.py
 [piskvorky]: https://github.com/Glutexo/pyladies-piskvorky/blob/master/piskvorky.py
-[@frenzymadness]: https://github.com/frenzymadness/
-[@encukou]: https://github.com/encukou/
-[@glutexo]: https://github.com/Glutexo/
