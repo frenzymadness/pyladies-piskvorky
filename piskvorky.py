@@ -6,8 +6,11 @@ SYMBOL_POCITACE = "o"
 
 def vyhodnot(pole):
     """
-    Vrátí x (výhra x), o (výhra o), ! (remíza), - (hra neskončila) podle stavu
-    hry.
+    Podle stavu herního pole vrátí:
+     řetězec "x", když vyhraje hráč,
+     řetězec "o", když vyhraje počítač,
+     řetězec "!", když dojde k remíze nebo
+     řetězec "-", když je možné ještě pokračovat ve hře
     """
     pass
 
