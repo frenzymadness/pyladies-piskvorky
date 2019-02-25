@@ -15,7 +15,7 @@ def vyhodnot(pole):
     pass
 
 
-def tah(pole: object, cislo_policka: object, symbol: object) -> object:
+def tah(pole, cislo_policka, symbol):
     """
     Vrátí herní pole s daným symbolem umístěným na danou pozici.
     """
